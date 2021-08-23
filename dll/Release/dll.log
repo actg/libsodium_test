@@ -1,0 +1,7 @@
+﻿  enc_dec.c
+     Creating library E:\libsodium_test\Release\dll.lib and object E:\libsodium_test\Release\dll.exp
+  Generating code
+  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  dll.vcxproj -> E:\libsodium_test\Release\dll.dll
+  dll.vcxproj -> E:\libsodium_test\Release\dll.pdb (Full PDB)
