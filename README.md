@@ -5,6 +5,7 @@
 - libsodium_test_server作为TCP server服务端，在windows上运行，接收客户端的连接，然后进行TCP解密并拆包
 
 ## 关于加密算法的实现描述
+- 加密/解密原理参考设计：https://github.com/shadowsocks/shadowsocks-libev.git，非常感谢。
 - 加密解密需要依赖nonce和key，以及counter计数，nonce即随机数，由客户端生成并在第一次建立连接后发送给服务端，key即秘钥，32 BYTE长度，客户端/服务端每发送、接收完N BYTE密文数据，都要对加密/解密counter进行累加N BYTE，counter类型为uint64_t类型
 - 每次客户端重新和服务端建立连接，都重新生成并发送8 BYTE的随机数nonce，确保即使同一个客户端同样的明文数据，不同的连接，产生的密文也是不一样的
 - 加密/解密不影响数据字节长度，长度保持不变
